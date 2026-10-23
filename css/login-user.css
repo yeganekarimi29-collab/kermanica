@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  margin: 0;
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+  color: #172033;
+}
+
+.user-login-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 18px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf4f9;
+}
+
+.user-login-panel {
+  width: 100%;
+  max-width: 580px;
+  min-height: 448px;
+  border-radius: 24px;
+  background: #fff;
+}
+
+.user-login-content {
+  width: 100%;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-login-logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+.user-login-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.user-login-title {
+  width: 100%;
+  margin: 0 0 32px;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.user-login-form {
+  width: 100%;
+  max-width: 440px;
+}
+
+.user-login-label {
+  display: block;
+  margin-bottom: 7px;
+  padding-right: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.required {
+  color: #e32626;
+  font-weight: 800;
+}
+
+.user-login-input {
+  display: block;
+  width: 100%;
+  height: 47px;
+  padding: 0 14px;
+  border: 1px solid #cbd2dc;
+  border-radius: 9px;
+  outline: none;
+  background: #fff;
+  color: #172033;
+  font-family: inherit;
+  font-size: 14px;
+  direction: rtl;
+  text-align: right;
+}
+
+.user-login-input:focus {
+  border-color: #087095;
+  box-shadow: 0 0 0 3px rgba(0, 107, 145, 0.12);
+}
+
+.user-login-button {
+  width: calc(100% + 20px);
+  height: 52px;
+  margin: 26px -10px 0;
+  border: 1px solid #006b91;
+  border-radius: 9px;
+  background: #006b91;
+  color: #fff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.user-login-button:hover {
+  background: #005979;
+}
+
+@media (max-width: 767px) {
+  .user-login-page {
+    padding: 18px 4px;
+  }
+
+  .user-login-panel {
+    width: calc(100% - 8px);
+    max-width: 390px;
+    min-height: 370px;
+    border-radius: 24px;
+  }
+
+  .user-login-content {
+    padding: 25px 16px 25px;
+  }
+
+  .user-login-logo {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 30px;
+  }
+
+  .user-login-title {
+    margin-bottom: 32px;
+    font-size: 19px;
+  }
+
+  .user-login-label {
+    font-size: 13px;
+  }
+
+  .user-login-input {
+    height: 47px;
+    font-size: 13px;
+  }
+
+  .user-login-button {
+    width: calc(100% + 20px);
+    height: 46px;
+    margin: 26px -10px 0;
+  }
+}

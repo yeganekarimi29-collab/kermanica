@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  margin: 0;
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+  color: #172033;
+}
+
+.verify-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 18px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf4f9;
+}
+
+.verify-panel {
+  width: 100%;
+  max-width: 588px;
+  min-height: 454px;
+  border-radius: 24px;
+  background: #fff;
+}
+
+.verify-content {
+  width: 100%;
+  padding: 30px 72px 33px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.verify-logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 30px;
+  flex-shrink: 0;
+}
+
+.verify-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.verify-title {
+  margin: 0 0 32px;
+  font-size: 22px;
+  line-height: 1.6;
+  font-weight: 800;
+  text-align: center;
+}
+
+.verify-description {
+  width: 100%;
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: right;
+}
+
+.verify-form {
+  width: 100%;
+}
+
+.code-inputs {
+  width: 100%;
+  display: flex;
+  gap: 4px;
+}
+
+.code-inputs input {
+  width: 0;
+  min-width: 0;
+  height: 69px;
+  flex: 1;
+  border: 1px solid #d1d6df;
+  border-radius: 9px;
+  outline: none;
+  background: #f8f9fa;
+  color: #172033;
+  font-family: inherit;
+  font-size: 24px;
+  text-align: center;
+}
+
+.code-inputs input:focus {
+  border-color: #006b91;
+  box-shadow: 0 0 0 2px rgba(0, 107, 145, 0.12);
+}
+
+.verify-actions {
+  width: 100%;
+  margin-top: 33px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.confirm-button,
+.back-button {
+  width: 0;
+  height: 49px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.confirm-button {
+  border: 1px solid #006b91;
+  background: #006b91;
+  color: #fff;
+  cursor: pointer;
+}
+
+.confirm-button:hover {
+  background: #005979;
+}
+
+.back-button {
+  background: transparent;
+  color: #465267;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background: #f5f7f9;
+}
+
+@media (max-width: 767px) {
+  .verify-page {
+    padding: 18px 4px;
+  }
+
+  .verify-panel {
+    width: calc(100% - 8px);
+    max-width: 390px;
+    min-height: 0;
+    border-radius: 24px;
+  }
+
+  .verify-content {
+    padding: 35px 16px 25px;
+  }
+
+  .verify-logo {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 30px;
+  }
+
+  .verify-title {
+    margin-bottom: 38px;
+    font-size: 19px;
+  }
+
+  .verify-description {
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+  .code-inputs {
+    gap: 4px;
+  }
+
+  .code-inputs input {
+    height: 64px;
+    border-radius: 9px;
+    font-size: 22px;
+  }
+
+  .verify-actions {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .verify-actions .confirm-button {
+    order: 1;
+  }
+
+  .verify-actions .back-button {
+    order: 2;
+  }
+
+  .verify-actions .confirm-button,
+  .verify-actions .back-button {
+    width: 100%;
+    height: 49px;
+    min-height: 49px;
+    flex: none;
+    margin: 0;
+  }
+}
+
+#phoneNumber {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
