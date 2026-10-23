@@ -1,92 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>انتخاب نوع حساب کاربری</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="css/register.css" rel="stylesheet">
-</head>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="css/register.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
+    <main
+      class="register-page d-flex align-items-center justify-content-center"
+    >
+      <section class="register-panel">
+        <div class="register-content">
+          <div class="register-logo">
+            <img src="img/logo.png" alt="لوگوی سایت" />
+          </div>
 
-    <main class="register-page d-flex align-items-center justify-content-center">
+          <h1 class="register-title">انتخاب نوع حساب کاربری</h1>
 
-        <section class="register-panel">
+          <p class="register-description">
+            لطفاً برای ایجاد حساب کاربری، نوع حساب کاربری خود را
+            <br />
+            مشخص کنید تا دسترسی‌ها و امکانات متناسب با شما فعال شود.
+          </p>
 
-            <a href="index.html" class="home-button btn">
-                برو به صفحه اصلی
-            </a>
+          <div class="row row-cols-3 g-3 account-types flex-row-reverse">
+            <div class="col">
+              <button type="button" class="account-card w-100 h-100">
+                <i class="bi bi-briefcase account-icon"></i>
 
-            <div class="register-content">
+                <span class="account-title">کارجو</span>
 
-                <div class="register-logo">
-                    <img src="img/logo.png" alt="لوگوی سایت">
-                </div>
-
-                <h1 class="register-title">
-                    انتخاب نوع حساب کاربری
-                </h1>
-
-                <p class="register-description">
-                    لطفاً برای ایجاد حساب کاربری، نوع حساب کاربری خود را
-                    <br>
-                    مشخص کنید تا دسترسی‌ها و امکانات متناسب با شما فعال شود.
-                </p>
-
-                <div class="row row-cols-3 g-3 account-types flex-row-reverse">
-
-                    <div class="col">
-                        <button type="button" class="account-card w-100 h-100">
-                            <i class="bi bi-briefcase account-icon"></i>
-
-                            <span class="account-title">کارجو</span>
-
-                            <span class="account-description">
-                                برای مشاهده و درخواست فرصت‌های شغلی
-                            </span>
-                        </button>
-                    </div>
-
-                    <div class="col">
-                        <button type="button" class="account-card w-100 h-100">
-                            <i class="bi bi-buildings account-icon"></i>
-
-                            <span class="account-title">صاحب کسب و کار</span>
-
-                            <span class="account-description">
-                                برای ثبت موقعیت شغلی و مدیریت فرآیند جذب
-                            </span>
-                        </button>
-                    </div>
-
-                    <div class="col">
-                        <button type="button" class="account-card account-card-featured w-100 h-100">
-                            <i class="bi bi-coin account-icon"></i>
-
-                            <span class="account-title">سرمایه‌گذار</span>
-
-                            <span class="account-description">
-                                برای بررسی و سرمایه‌گذاری روی پروژه‌ها
-                            </span>
-                        </button>
-                    </div>
-
-                </div>
-
-                <button type="button" class="continue-button btn w-100">
-                    شروع ثبت نام
-                </button>
-
+                <span class="account-description">
+                  برای مشاهده و درخواست فرصت‌های شغلی
+                </span>
+              </button>
             </div>
 
-        </section>
+            <div class="col">
+              <button type="button" class="account-card w-100 h-100">
+                <i class="bi bi-buildings account-icon"></i>
 
+                <span class="account-title">صاحب کسب و کار</span>
+
+                <span class="account-description">
+                  برای ثبت موقعیت شغلی و مدیریت فرآیند جذب
+                </span>
+              </button>
+            </div>
+
+            <div class="col">
+              <button
+                type="button"
+                class="account-card account-card-featured w-100 h-100"
+              >
+                <i class="bi bi-coin account-icon"></i>
+
+                <span class="account-title">سرمایه‌گذار</span>
+
+                <span class="account-description">
+                  برای بررسی و سرمایه‌گذاری روی پروژه‌ها
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <button type="button" class="continue-button btn w-100">
+            شروع ثبت نام
+          </button>
+
+          <a href="index.html" class="home-button btn"> برو به صفحه اصلی </a>
+          
+        </div>
+      </section>
     </main>
-
-</body>
+  </body>
 </html>
