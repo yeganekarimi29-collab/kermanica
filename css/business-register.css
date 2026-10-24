@@ -1,0 +1,289 @@
+/* تنظیمات عمومی */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    background: linear-gradient(135deg, #f5fbff, #e4f2ff);
+    color: #334155;
+    min-height: 100vh;
+}
+
+/* هدر */
+.header-section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.header-section > div {
+    gap: 12px;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.brand-text h1 {
+    font-size: 17px;
+    color: #006b91;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.brand-text p {
+    font-size: 11px;
+    color: #47758b;
+    margin: 0;
+}
+
+/* کادر فرم */
+.form-container {
+    max-width: 1140px;
+    margin: 10px auto 40px;
+}
+
+.form-card {
+    background: rgba(255, 255, 255, 0.94);
+    border: 2px solid #e5eff6;
+    border-radius: 25px;
+    padding: 25px 55px 35px;
+    box-shadow: 0 8px 25px rgba(0, 111, 180, 0.08);
+}
+
+/* عنوان فرم */
+.form-title {
+    color: #006b91;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+/* عنوان فیلدها */
+.form-label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #475569;
+}
+
+/* ورودی‌ها و فهرست‌ها */
+.form-control,
+.form-select {
+    min-height: 43px;
+    border: 1px solid #d7e0ea;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12px;
+    color: #475569;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #042d48;
+    box-shadow: 0 0 0 3px rgba(32, 164, 255, 0.12);
+}
+
+/* دکمه‌ها */
+.btn-primary {
+    background-color: #1e5b6f;
+    border-color: #206d85;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 43px;
+}
+
+.btn-primary:hover {
+    background-color: #26667f;
+    border-color: #15566e;
+}
+
+
+.form-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    direction: ltr;
+    gap: 12px;
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 100px;
+    margin-bottom: -9px;
+
+}
+
+.submit-button {
+    min-width: 130px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: #172c4b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+
+/* بخش محصولات */
+.products-section {
+    margin-top: 25px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.product-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #d7e0ea;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 12px;
+    background: #fff;
+}
+
+.remove-product {
+    border: 0;
+    background: transparent;
+    color: #dc3545;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+/* نمایش پیام فرم */
+#formMessage {
+    font-size: 13px;
+}
+
+.mobile-txt {
+    display: none;
+}
+
+/* نمایش در موبایل */
+@media screen and (max-width: 767px) {
+
+
+    .desktop-txt {
+      display: none;
+    }
+
+    .mobile-txt {
+        display: block;
+    }
+
+    .header-section {
+        padding-top: 18px;
+        padding-bottom: 15px;
+    }
+
+    .logo {
+        width: 90px;
+        height: 80px;
+    }
+
+    .brand-text h1 {
+        display: none;
+    }
+
+    .brand-text p {
+        display: none;
+    }
+
+    .form-container {
+        margin-top: 5px;
+        padding: 0 12px;
+    }
+
+
+
+    /* حذف پس‌زمینه سفید کارت فرم */
+    .form-card {
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    /* حذف پس‌زمینه سفید ورودی‌ها */
+    .form-control,
+    .form-select {
+        background-color: floralwhite;
+        box-shadow: none !important;
+    }
+
+    /* حذف پس‌زمینه جداگانه لیبل‌ها */
+    .form-lable,
+    .form-label {
+        background: transparent !important;
+    }
+
+
+
+   .form-title {
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 50px;
+      margin-top: -12px;
+      text-align: center;
+    }
+
+
+    .form-actions {
+        margin-top: 30px !important;
+    }
+
+    .form-actions {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     gap: 10px;
+    }
+
+   .form-actions .submit-button,
+   .form-actions .back-button {
+      width: 100%;
+     box-sizing: border-box;
+    }
+
+    .submit-button {
+        min-width: 130px;
+        flex: 1;
+    }
+
+    .back-button {
+        background-color: #f9f4f4;
+        padding: 12px;
+    }
+}
