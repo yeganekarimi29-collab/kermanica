@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap");
+
+/* تنظیمات عمومی */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  margin: 0;
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+  color: #172033;
+}
+
+/* پس‌زمینه */
+
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf4f9;
+}
+
+/* پنل سفید */
+
+.login-panel {
+  width: 100%;
+  max-width: 650px;
+  min-height: 477px;
+  border-radius: 25px;
+  background: #fff;
+}
+
+/* محتوای پنل */
+
+.login-content {
+  width: 100%;
+  padding: 30px 40px 29px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* لوگو */
+
+.login-logo {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  margin-bottom: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-logo img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* توضیحات */
+
+.login-subtitle {
+  margin: 0 0 7px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* عنوان اصلی */
+
+.login-title {
+  width: 100%;
+  margin: 0 0 36px;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* فرم */
+
+.login-form {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+/* برچسب شماره تماس */
+
+.login-label {
+  display: block;
+  margin-bottom: 7px;
+  padding-right: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.required {
+  color: #e32626;
+  font-weight: 800;
+}
+
+/* ورودی شماره موبایل */
+
+.login-input {
+  display: block;
+  width: 100%;
+  height: 47px;
+  padding: 0 14px;
+  border: 1px solid #cbd2dc;
+  border-radius: 9px;
+  outline: none;
+  background: #fff;
+  color: #172033;
+  font-family: inherit;
+  font-size: 14px;
+  text-align: right;
+  direction: rtl;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.login-input::placeholder {
+  color: #7a8499;
+  opacity: 1;
+}
+
+.login-input:focus {
+  border-color: #087095;
+  box-shadow: 0 0 0 3px rgba(0, 107, 145, 0.12);
+}
+
+/* ردیف دکمه‌ها */
+
+.login-actions {
+  width: 100%;
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* دکمه ارسال کد */
+
+.send-button {
+  flex: 1;
+  height: 51px;
+  border: 1px solid #006b91;
+  border-radius: 9px;
+  background: #006b91;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background: #005979;
+  border-color: #005979;
+}
+
+/* دکمه بازگشت */
+
+.back-button {
+  flex: 1;
+  height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: transparent;
+  color: #465267;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background: #f5f7f9;
+  color: #172033;
+}
+
+.login-title-mobile {
+  display: none;
+}
+
+/* موبایل */
+
+@media (max-width: 767px) {
+  .login-page {
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .login-subtitle {
+    display: none;
+  }
+
+  .login-panel {
+    width: calc(100% - 8px);
+    max-width: 390px;
+    min-height: 477px;
+    border-radius: 24px;
+  }
+
+  .login-content {
+    padding: 25px 20px 24px;
+  }
+
+  .login-logo {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 28px;
+  }
+
+  .login-logo img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .login-subtitle {
+    font-size: 14px;
+  }
+
+  .login-title-desktop {
+    display: none;
+  }
+
+  .login-title-mobile {
+    display: block;
+    margin-bottom: 32px;
+    font-size: 19px;
+  }
+
+  .login-label {
+    font-size: 13px;
+  }
+
+  .login-input {
+    height: 47px;
+    font-size: 13px;
+  }
+
+  /* فقط نسخه موبایل */
+
+  .login-actions {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .login-actions .send-button {
+    order: -1;
+  }
+
+  .login-actions .back-button {
+    order: 1;
+  }
+
+  .login-actions .send-button,
+  .login-actions .back-button {
+    width: 100%;
+    height: 50px;
+    min-height: 36px;
+    flex: none;
+    margin: 0;
+  }
+}
+
+.phone-error {
+  margin: 6px 0 0;
+  color: #f04438;
+  font-size: 12px;
+  text-align: right;
+}
+
+.phone-error a {
+  color: #55a9d1;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-input.input-error {
+  border: 1px solid #ff3b30;
+  box-shadow: none;
+}
+
+.existing-user-button {
+  width: 100%;
+  height: 40px;
+  margin-top: 18px;
+  border: 1px solid #d4dbe5;
+  border-radius: 8px;
+  background: #fff;
+  color: #a0aec0;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none !important;
+}

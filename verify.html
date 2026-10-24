@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تأیید کد</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/verify.css" />
+  </head>
+
+  <body>
+    <main class="verify-page">
+      <section class="verify-panel">
+        <div class="verify-content">
+          <div class="verify-logo">
+            <img src="img/logo.png" alt="لوگوی سایت" />
+          </div>
+
+          <h1 class="verify-title">کد تایید را وارد کنید</h1>
+
+          <p class="verify-description">
+            کد تایید برای شماره
+            <span id="phoneNumber" dir="ltr"></span>
+            پیامک شده است؛ آن را وارد کنید.
+          </p>
+
+          <form class="verify-form" action="#" method="post">
+            <div class="code-inputs" dir="ltr">
+              <input
+                type="text"
+                inputmode="numeric"
+                maxlength="1"
+                aria-label="رقم اول"
+                required
+              />
+              <input
+                type="text"
+                inputmode="numeric"
+                maxlength="1"
+                aria-label="رقم دوم"
+                required
+              />
+              <input
+                type="text"
+                inputmode="numeric"
+                maxlength="1"
+                aria-label="رقم سوم"
+                required
+              />
+              <input
+                type="text"
+                inputmode="numeric"
+                maxlength="1"
+                aria-label="رقم چهارم"
+                required
+              />
+              <input
+                type="text"
+                inputmode="numeric"
+                maxlength="1"
+                aria-label="رقم پنجم"
+                required
+              />
+              <input
+                type="text"
+                inputmode="numeric"
+                maxlength="1"
+                aria-label="رقم ششم"
+                required
+              />
+            </div>
+
+            <div class="verify-actions">
+              <a href="login.html" class="back-button">بازگشت</a>
+              <button type="submit" class="confirm-button">تایید</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const phone = params.get("phone");
+
+      const phoneNumber = document.getElementById("phoneNumber");
+
+      if (phone && /^09\d{9}$/.test(phone)) {
+        phoneNumber.textContent = phone.replace(
+          /(\d{3})\d{4}(\d{4})/,
+          "$1****$2",
+        );
+      } else {
+        window.location.href = "login.html";
+      }
+    </script>
+  </body>
+</html>

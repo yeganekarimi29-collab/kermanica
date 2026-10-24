@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap");
+
+/* =========================
+   تنظیمات عمومی
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Vazirmatn", sans-serif;
+  color: #292d39;
+  background: #fff0f0;
+}
+
+/* =========================
+   پس‌زمینه صفحه
+========================= */
+
+.error-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 130px 24px 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 80%,
+      rgba(255, 145, 155, 0.32) 0%,
+      transparent 62%
+    ),
+    linear-gradient(150deg, #fffafa 0%, #fff0f0 55%, #ffdfe1 100%);
+}
+
+/* =========================
+   محتوای اصلی
+========================= */
+
+.error-content {
+  width: 100%;
+  max-width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   آیکون هشدار
+========================= */
+
+.error-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 0 24px;
+
+  flex-shrink: 0;
+  color: #d4cbce;
+}
+
+.error-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================
+   عنوان
+========================= */
+
+.error-content h1 {
+  margin: 0 0 16px;
+
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.8;
+}
+
+/* =========================
+   متن توضیحات
+========================= */
+
+.error-description {
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+/* =========================
+   دکمه‌ها
+========================= */
+
+.error-actions {
+  width: 100%;
+  margin-top: 32px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.error-button {
+  height: 34px;
+  padding: 0 80px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #d9dfe3;
+  border-radius: 5px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.retry-button {
+  width: 138px;
+  min-width: 138px;
+
+  color: #fff;
+  background: #056787;
+  border-color: #056787;
+}
+
+.retry-button:hover {
+  color: #fff;
+  background: #045570;
+}
+
+.back-button {
+  width: 106px;
+  min-width: 106px;
+
+  color: #394153;
+  background: #fff;
+}
+
+.back-button:hover {
+  color: #394153;
+  background: #f7f7f7;
+}
+
+/* متن مخصوص موبایل در دسکتاپ مخفی است */
+.mobile-text {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .error-actions {
+    direction: ltr;
+  }
+}
+
+/* =========================
+   نسخه موبایل
+========================= */
+
+@media (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .error-page {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    margin: 0;
+    padding: 105px 16px 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    background:
+      radial-gradient(
+        ellipse at 50% 72%,
+        rgba(255, 145, 155, 0.32) 0%,
+        transparent 62%
+      ),
+      linear-gradient(160deg, #fffafa 0%, #fff0f0 55%, #ffdfe1 100%);
+  }
+
+  .error-content {
+    width: 100%;
+    max-width: 390px;
+
+    min-height: calc(100vh - 129px);
+    min-height: calc(100dvh - 129px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .error-icon {
+    width: 86px;
+    height: 86px;
+    margin-bottom: 22px;
+  }
+
+  .error-content h1 {
+    width: 100%;
+    margin: 0 0 6px;
+
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.9;
+  }
+
+  .error-description {
+    width: 100%;
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  .error-actions {
+    width: 100%;
+    margin-top: auto;
+    padding-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .error-button {
+    width: calc(100% + 12px);
+    min-width: 0;
+    height: 30px;
+    padding: 22px;
+    font-size: 14px;
+  }
+
+  .retry-button {
+    order: 1;
+    width: calc(100% + 12px);
+    min-width: 0;
+    height: 30px;
+    align-self: center;
+  }
+
+  .back-button {
+    order: 2;
+    align-self: center;
+
+    width: auto;
+    min-width: 0;
+    height: auto;
+
+    padding: 5px 15px;
+    border: none;
+
+    background: transparent;
+    color: #8b5258;
+  }
+
+  .back-button:hover {
+    background: transparent;
+    color: #8b5258;
+  }
+
+  .desktop-text {
+    display: none !important;
+  }
+
+  .mobile-text {
+    display: inline;
+  }
+}

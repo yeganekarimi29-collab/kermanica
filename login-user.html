@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ورود به حساب کاربری</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/login-user.css" />
+  </head>
+
+  <body>
+    <main class="user-login-page">
+      <section class="user-login-panel">
+        <div class="user-login-content">
+          <div class="user-login-logo">
+            <img src="img/logo.png" alt="لوگوی سایت" />
+          </div>
+
+          <h1 class="user-login-title">ورود به حساب کاربری</h1>
+
+          <form id="userLoginForm" class="user-login-form">
+            <label for="userPhone" class="user-login-label">
+              شماره تماس
+              <span class="required">*</span>
+            </label>
+
+            <input
+              type="tel"
+              id="userPhone"
+              class="user-login-input"
+              placeholder="شماره تماس خود را وارد نمایید"
+              inputmode="numeric"
+              autocomplete="tel"
+              maxlength="11"
+              required
+            />
+
+            <button type="submit" class="user-login-button">
+              ورود به حساب کاربری
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const phone = params.get("phone");
+      const userPhone = document.getElementById("userPhone");
+
+      if (phone && /^09\d{9}$/.test(phone)) {
+        userPhone.value = phone;
+      }
+
+      document
+        .getElementById("userLoginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const enteredPhone = userPhone.value.trim();
+
+          if (!/^09\d{9}$/.test(enteredPhone)) {
+            alert("لطفاً شماره موبایل معتبر وارد کنید.");
+            return;
+          }
+
+          window.location.href =
+            "verify.html?phone=" + encodeURIComponent(enteredPhone);
+        });
+    </script>
+  </body>
+</html>
