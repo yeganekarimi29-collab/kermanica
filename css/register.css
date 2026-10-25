@@ -43,7 +43,9 @@ body {
   border-radius: 24px;
   overflow: hidden;
 
-  background: url("../img/background.png") center / cover no-repeat;
+  background:
+    linear-gradient(#ffffff80, #ffffff80),
+    url("../img/background.png") center bottom / cover no-repeat;
 }
 
 .register-content {
@@ -287,9 +289,24 @@ body {
 
   .register-panel {
     width: 100%;
-    max-width: 650px;
+    max-width: 100%;
+    min-width: 0;
     min-height: 0;
-    border-radius: 20px 20px 0 0;
+
+    background-color: #eaf6ff;
+
+    background-image:
+      linear-gradient(#ffffff80, #ffffff80), url("../img/background.png");
+
+    background-size:
+      100% 100%,
+      100% 100%;
+
+    background-position: center, center;
+
+    background-repeat: no-repeat, no-repeat;
+
+    border-radius: 24px;
   }
 
   .register-content {
@@ -326,6 +343,7 @@ body {
   .account-types,
   .continue-button {
     max-width: 100%;
+    
   }
 }
 

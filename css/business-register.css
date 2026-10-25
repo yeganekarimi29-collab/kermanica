@@ -1,291 +1,388 @@
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap");
 
-/* تنظیمات عمومی */
-* {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
 }
 
 body {
-    margin: 0;
-    font-family: 'Vazirmatn', sans-serif;
-    background: linear-gradient(135deg, #f5fbff, #e4f2ff);
-    color: #334155;
-    min-height: 100vh;
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+  color: #172033;
+
+  background-color: #d9edff;
+  background-image:
+    linear-gradient(rgba(239, 248, 255, 0.02), rgba(225, 241, 255, 0.02)),
+    url("../img/background.png");
+
+  background-position: 50% center;
+  background-size: 145% 145%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
-/* هدر */
+/* سربرگ و لوگو */
 .header-section {
-    padding-top: 25px;
-    padding-bottom: 25px;
+  max-width: 1140px;
+  padding: 24px 20px 12px;
+  margin: 0 auto;
 }
 
-.header-section > div {
-    gap: 12px;
-}
-
-.logo {
-    width: 65px;
-    height: 65px;
-    object-fit: contain;
+.header-section .logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-right: 14px;
 }
 
 .brand-text h1 {
-    font-size: 17px;
-    color: #006b91;
-    font-weight: bold;
-    margin-bottom: 6px;
+  margin: 0 0 5px;
+  color: #006b91;
+  font-size: 16px;
+  font-weight: 800;
 }
 
 .brand-text p {
-    font-size: 11px;
-    color: #47758b;
-    margin: 0;
+  margin: 0;
+  color: #45677c;
+  font-size: 10px;
 }
 
-/* کادر فرم */
+/* پنل فرم */
 .form-container {
-    max-width: 1140px;
-    margin: 10px auto 40px;
+  max-width: 1140px;
+  padding: 18px 20px 60px;
+  margin: 0 auto;
 }
 
 .form-card {
-    background: rgba(255, 255, 255, 0.94);
-    border: 2px solid #e5eff6;
-    border-radius: 25px;
-    padding: 25px 55px 35px;
-    box-shadow: 0 8px 25px rgba(0, 111, 180, 0.08);
+  width: 100%;
+  min-height: 420px;
+  padding: 28px 40px 30px;
+
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+
+  box-shadow:
+    0 15px 50px rgba(42, 82, 115, 0.22),
+    0 0 80px rgba(42, 82, 115, 0.2);
+  backdrop-filter: blur(5px);
 }
 
-/* عنوان فرم */
 .form-title {
-    color: #006b91;
-    font-size: 17px;
-    font-weight: bold;
-    text-align: right;
-    margin-bottom: 30px;
+  margin: 0 0 28px;
+  color: #006b91;
+  font-size: 15px;
+  font-weight: 800;
+  text-align: right;
 }
 
-/* عنوان فیلدها */
 .form-label {
-    display: block;
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #475569;
+  display: block;
+  margin-bottom: 8px;
+  color: #27364a;
+  font-size: 12px;
+  font-weight: 600;
 }
 
-/* ورودی‌ها و فهرست‌ها */
 .form-control,
 .form-select {
-    min-height: 43px;
-    border: 1px solid #d7e0ea;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 12px;
-    color: #475569;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-}
-
-.form-control::placeholder {
-    color: #94a3b8;
+  min-height: 42px;
+  padding: 9px 12px;
+  color: #26374a;
+  background-color: rgba(255, 255, 255, 0.88);
+  border: 1px solid #d8e0e9;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 12px;
+  text-align: right;
 }
 
 .form-control:focus,
 .form-select:focus {
-    border-color: #042d48;
-    box-shadow: 0 0 0 3px rgba(32, 164, 255, 0.12);
+  border-color: #79bdd7;
+  box-shadow: 0 0 0 3px rgba(0, 107, 145, 0.09);
 }
 
-/* دکمه‌ها */
-.btn-primary {
-    background-color: #1e5b6f;
-    border-color: #206d85;
-    border-radius: 7px;
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: bold;
-    min-height: 43px;
+.form-control::placeholder {
+  color: #8995a8;
+  opacity: 1;
 }
 
-.btn-primary:hover {
-    background-color: #26667f;
-    border-color: #15566e;
-}
-
-
-.form-actions {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    direction: ltr;
-    gap: 12px;
-    width: 100%;
-    margin-top: 30px;
-    padding-top: 100px;
-    margin-bottom: -9px;
-
-}
-
-.submit-button {
-    min-width: 130px;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: bold;
-}
-
-.back-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
-    border-radius: 8px;
-    color: #172c4b;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 13px;
-    transition: all 0.2s ease;
-}
-
-.back-button:hover {
-    background-color: #f1f5f9;
-    color: #1e293b;
-}
-
-
-/* بخش محصولات */
+/* محصولات */
 .products-section {
-    margin-top: 25px;
+  margin-top: 28px !important;
+}
+
+.products-section > .form-label {
+  margin-bottom: 10px;
+}
+
+#addProduct {
+  min-height: 42px;
+  color: white;
+  background: #006b91;
+  border-color: #006b91;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
 }
 
-.product-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    border: 1px solid #d7e0ea;
-    border-radius: 5px;
-    padding: 6px 10px;
-    font-size: 12px;
-    background: #fff;
+.product-list > * {
+  max-width: 100%;
 }
 
-.remove-product {
-    border: 0;
-    background: transparent;
-    color: #dc3545;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 0;
-    line-height: 1;
+/* دکمه‌های پایین فرم */
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-top: 48px !important;
+  direction: ltr;
 }
 
-/* نمایش پیام فرم */
-#formMessage {
-    font-size: 13px;
+.submit-button,
+.back-button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
 }
 
+.submit-button {
+  min-width: 130px;
+  color: #fff;
+  background: #006b91;
+  border: 1px solid #006b91;
+}
+
+.submit-button:hover,
+#addProduct:hover {
+  color: #fff;
+  background: #005979;
+  border-color: #005979;
+}
+
+.back-button {
+  min-width: 100px;
+  color: #30435a;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.back-button:hover {
+  color: #006b91;
+  background: #f0f8fc;
+}
+
+/* متن‌های مخصوص دسکتاپ و موبایل */
 .mobile-txt {
-    display: none;
+  display: none;
 }
 
-/* نمایش در موبایل */
-@media screen and (max-width: 767px) {
+.desktop-txt {
+  display: block;
+}
 
+.form-logo {
+  display: none;
+}
 
-    .desktop-txt {
-      display: none;
-    }
+/* ===== نسخه موبایل؛ مطابق تصویر مرجع ===== */
+@media (max-width: 767.98px) {
+  html,
+  body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #f4faff !important;
+  }
 
-    .mobile-txt {
-        display: block;
-    }
+  body {
+    overflow-x: hidden;
+  }
 
-    .header-section {
-        padding-top: 18px;
-        padding-bottom: 15px;
-    }
+  .header-section {
+    display: none;
+  }
 
-    .logo {
-        width: 90px;
-        height: 80px;
-    }
+  .desktop-logo,
+  .desktop-txt {
+    display: none !important;
+  }
 
-    .brand-text h1 {
-        display: none;
-    }
+  .mobile-txt {
+    display: block;
+  }
 
-    .brand-text p {
-        display: none;
-    }
+  .form-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 
-    .form-container {
-        margin-top: 5px;
-        padding: 0 12px;
-    }
+  .form-card {
+    position: relative;
+    box-sizing: border-box;
+    width: 100% !important;
+    min-height: 100vh;
+    margin: 0 !important;
+    padding: 24px 10px 10px;
 
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
 
+    background-color: #f8fcff;
+    background-image:
+      linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.99) 0%,
+        rgba(255, 255, 255, 0.97) 53%,
+        rgba(255, 255, 255, 0.65) 75%,
+        rgba(255, 255, 255, 0.2) 100%
+      ),
+      url("../img/background.png");
 
-    /* حذف پس‌زمینه سفید کارت فرم */
-    .form-card {
-        background: transparent !important;
-        box-shadow: none !important;
-        border: none !important;
-    }
+    background-position:
+      center,
+      center bottom;
+    background-size: 100% 100%, 280% auto;
+    background-repeat: no-repeat;
+  }
 
-    /* حذف پس‌زمینه سفید ورودی‌ها */
-    .form-control,
-    .form-select {
-        background-color: floralwhite;
-        box-shadow: none !important;
-    }
+  .form-card .form-logo {
+    display: block;
+    width: 76px;
+    height: 76px;
+    object-fit: contain;
+    margin: 0 auto 8px;
+  }
 
-    /* حذف پس‌زمینه جداگانه لیبل‌ها */
-    .form-lable,
-    .form-label {
-        background: transparent !important;
-    }
+  .form-title {
+    margin: 0 0 42px;
+    font-size: 13px;
+    line-height: 1.9;
+    text-align: center;
+    color: #00658d;
+    font-weight: 700;
+  }
 
+  .form-card .form-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: right;
+  }
 
+  .form-card .form-control,
+  .form-card .form-select {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 42px;
+    padding: 8px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border: 1px solid #d6dfe7;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.94);
+    text-align: right;
+    direction: rtl;
+  }
 
-   .form-title {
-      font-size: 15px;
-      line-height: 1.8;
-      margin-bottom: 50px;
-      margin-top: -12px;
-      text-align: center;
-    }
+  .form-card .mb-3 {
+    margin-bottom: 16px !important;
+  }
 
+  .products-section {
+    position: relative;
+    margin-top: 8px !important;
+  }
 
-    .form-actions {
-        margin-top: 30px !important;
-    }
+  .products-section .row {
+    --bs-gutter-x: 6px;
+    --bs-gutter-y: 5px;
+  }
 
-    .form-actions {
-     display: flex;
-     flex-direction: column;
-     width: 100%;
-     gap: 10px;
-    }
+  .form-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 6px !important;
+    margin-top: 58px !important;
+  }
 
-   .form-actions .submit-button,
-   .form-actions .back-button {
-      width: 100%;
-     box-sizing: border-box;
-    }
+  .form-actions .submit-button,
+  .form-actions .back-button {
+    width: 100%;
+    min-height: 31px;
+    padding: 11px 10px;
+    font-size: 13px;
+    border-radius: 5px;
+  }
 
-    .submit-button {
-        min-width: 130px;
-        flex: 1;
-    }
+  #addProduct {
+    width: 100% !important;
+    height: 42px;
+    min-height: 42px;
+    padding: 5px 8px;
+    font-size: 12px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+}
 
-    .back-button {
-        background-color: #f9f4f4;
-        padding: 12px;
-    }
+/* ===== موبایل باریک ===== */
+@media (max-width: 400px) {
+  .form-container {
+    padding: 0 !important;
+  }
+
+  .form-card {
+    padding: 24px 10px 10px;
+  }
+
+  .form-card .form-logo {
+    width: 76px;
+    height: 76px;
+  }
+
+  .form-title {
+    font-size: 13px;
+    margin-bottom: 42px;
+  }
+
+  .form-card .form-label {
+    font-size: 10px;
+  }
+
+  .form-card .form-control,
+  .form-card .form-select {
+    font-size: 10px;
+  }
 }
