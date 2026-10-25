@@ -20,12 +20,19 @@ html {
   min-height: 100vh;
 }
 
+
 body {
   min-height: 100vh;
   font-family: "Vazirmatn", sans-serif;
   color: #292d39;
-  background: #fff0f0;
+
+  background-image: url("../img/background-red.jpg");
+  background-size: cover;
+  background-position: center 65%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
 
 /* =========================
    پس‌زمینه صفحه
@@ -43,13 +50,8 @@ body {
 
   text-align: center;
 
-  background:
-    radial-gradient(
-      ellipse at 50% 80%,
-      rgba(255, 145, 155, 0.32) 0%,
-      transparent 62%
-    ),
-    linear-gradient(150deg, #fffafa 0%, #fff0f0 55%, #ffdfe1 100%);
+  background: linear-gradient(to bottom, #FFFFFF80 0%, rgba(204, 148, 154, 0.55) 100%);
+
 }
 
 /* =========================
@@ -75,7 +77,7 @@ body {
   margin: 0 0 24px;
 
   flex-shrink: 0;
-  color: #d4cbce;
+  color: #c4bcbf;
 }
 
 .error-icon svg {
@@ -205,13 +207,7 @@ body {
     justify-content: center;
     align-items: stretch;
 
-    background:
-      radial-gradient(
-        ellipse at 50% 72%,
-        rgba(255, 145, 155, 0.32) 0%,
-        transparent 62%
-      ),
-      linear-gradient(160deg, #fffafa 0%, #fff0f0 55%, #ffdfe1 100%);
+    background: rgba(220, 105, 115, 0.55);
   }
 
   .error-content {

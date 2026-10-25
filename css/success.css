@@ -8,6 +8,12 @@ body {
   margin: 0;
   font-family: "Vazirmatn", sans-serif;
   color: #292d39;
+
+  background-image: url("../img/background-green.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .success-page {
@@ -17,14 +23,10 @@ body {
   justify-content: center;
   padding: 100px 24px 60px;
 
-  /* پس‌زمینه موقت تا رسیدن تصویر اصلی */
-  background:
-    radial-gradient(
-      ellipse at 50% 85%,
-      rgba(145, 226, 198, 0.55) 0%,
-      transparent 65%
-    ),
-    linear-gradient(135deg, #f9fdfb 0%, #e5f7ef 55%, #d4f1e5 100%);
+  background: transparent;
+
+ 
+
 }
 
 .success-content {
@@ -37,7 +39,7 @@ body {
   width: 100px;
   height: 100px;
   margin: 0 auto 25px;
-  color: #bdcbc6;
+  color: #b9c0bf;
 }
 
 .success-icon svg {
@@ -109,6 +111,7 @@ body {
     margin: 0;
     padding: 0;
   }
+  
 
   .success-page {
     width: 100%;
@@ -119,7 +122,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    background: #eaf4f9;
+    background: transparent;
+    background: rgba(255, 255, 255, 0.55);
   }
 
   .success-content {
@@ -135,13 +139,7 @@ body {
     align-items: center;
     text-align: center;
 
-    background:
-      radial-gradient(
-        ellipse at 50% 75%,
-        rgba(157, 229, 205, 0.35),
-        transparent 65%
-      ),
-      linear-gradient(160deg, #fbfdfc 0%, #f0faf5 50%, #ddf5eb 100%);
+    background: transparent;
   }
 
   .success-icon {
